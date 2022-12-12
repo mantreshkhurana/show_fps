@@ -32,7 +32,7 @@ MaterialApp(
       home: Material(
         child: ShowFPS(
           visible: true,
-          showChart: true,
+          showChart: false,
           borderRadius: BorderRadius.all(Radius.circular(11)),
           child: MyHomePage(title: 'FPS Monitor'),
         ),

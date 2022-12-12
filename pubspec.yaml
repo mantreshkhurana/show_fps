@@ -1,6 +1,6 @@
 name: show_fps
 description: A package to show FPS on screen.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/mantreshkhurana/show_fps
 
 environment:
@@ -14,6 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
   flutter_lints: ^2.0.0
 
 flutter:
