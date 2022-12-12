@@ -116,7 +116,8 @@ class ShowFPSState extends State<ShowFPS> {
                                       decoration: BoxDecoration(
                                         color: Color.lerp(
                                           const Color(0xfff44336),
-                                          const Color(0xff4caf50),
+                                          const Color.fromARGB(
+                                              255, 0, 162, 255),
                                           p,
                                         ),
                                         borderRadius: BorderRadius.circular(2),
