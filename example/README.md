@@ -1,3 +1,3 @@
 # example
 
-An example app for the `fps_badge` package.
+An example app for the `show_fps` package.
