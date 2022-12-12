@@ -9,11 +9,11 @@ Use ShowFPS to monitor your app's FPS (Frames Per Second) in real time.
 
 ## Installation
 
-Add `show_fps: ^1.0.0` in your project's pubspec.yaml:
+Add `show_fps: ^1.0.2` in your project's pubspec.yaml:
 
 ```yaml
 dependencies:
-  show_fps: ^1.0.0
+  show_fps: ^1.0.2
 ```
 
 ## Usage

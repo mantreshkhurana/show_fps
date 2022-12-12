@@ -1,6 +1,6 @@
 name: show_fps
 description: A package to show FPS on screen.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/mantreshkhurana/show_fps
 
 environment:

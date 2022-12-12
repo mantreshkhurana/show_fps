@@ -1,3 +1,7 @@
+## 1.0.2
+
+- README.md Update.
+
 ## 1.0.1
 
 - FPS Chart Graph Color is now Blue.
