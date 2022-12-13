@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:math';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:show_fps/show_fps.dart';
 
 void main() {
@@ -10,16 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const CupertinoApp(
       title: 'FPS Monitor',
+      theme: CupertinoThemeData(
+        brightness: Brightness.light,
+      ),
       debugShowCheckedModeBanner: false,
-      home: Material(
-        child: ShowFPS(
-          visible: true,
-          showChart: false,
-          borderRadius: BorderRadius.all(Radius.circular(11)),
-          child: MyHomePage(title: 'FPS Monitor'),
-        ),
+      home: ShowFPS(
+        visible: true,
+        showChart: false,
+        borderRadius: BorderRadius.all(Radius.circular(11)),
+        child: MyHomePage(title: 'FPS Monitor'),
       ),
     );
   }
@@ -35,38 +38,50 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  final random = Random();
+  final stopwatch = Stopwatch();
+  int throttledFramesCount = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
+  void throttle() {
+    stopwatch.start();
+
+    int duration = random.nextInt(30) + 10;
+
+    while (stopwatch.elapsedMilliseconds < duration) {}
+    stopwatch.reset();
+    stopwatch.stop();
+
+    if (throttledFramesCount > 7) {
+      throttledFramesCount = 0;
+      return;
+    }
+
+    throttledFramesCount++;
+
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+      throttle();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text(widget.title),
       ),
-      body: Center(
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            CupertinoButton(
+              color: CupertinoColors.activeBlue,
+              child: const Text('Throttle'),
+              onPressed: () {
+                throttle();
+              },
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

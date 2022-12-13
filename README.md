@@ -9,11 +9,11 @@ Use ShowFPS to monitor your app's FPS (Frames Per Second) in real time.
 
 ## Installation
 
-Add `show_fps: ^1.0.2` in your project's pubspec.yaml:
+Add `show_fps: ^1.0.3` in your project's pubspec.yaml:
 
 ```yaml
 dependencies:
-  show_fps: ^1.0.2
+  show_fps: ^1.0.3
 ```
 
 ## Usage
@@ -27,15 +27,17 @@ import 'package:show_fps/show_fps.dart';
 Then warp your Main Widget with `ShowFPS` widget:
 
 ```dart
-MaterialApp(
+CupertinoApp(
       title: 'FPS Monitor',
-      home: Material(
-        child: ShowFPS(
-          visible: true,
-          showChart: false,
-          borderRadius: BorderRadius.all(Radius.circular(11)),
-          child: MyHomePage(title: 'FPS Monitor'),
-        ),
+      theme: CupertinoThemeData(
+        brightness: Brightness.light,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: ShowFPS(
+        visible: true,
+        showChart: false,
+        borderRadius: BorderRadius.all(Radius.circular(11)),
+        child: MyHomePage(title: 'FPS Monitor'),
       ),
     );
 ```

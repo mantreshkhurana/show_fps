@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Font Size Fixed.
+
 ## 1.0.2
 
 - README.md Update.

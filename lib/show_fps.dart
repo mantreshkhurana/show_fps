@@ -94,7 +94,10 @@ class ShowFPSState extends State<ShowFPS> {
                         if (timings.isNotEmpty)
                           Text(
                             'FPS: ${timings.last.fps.toStringAsFixed(0)}',
-                            style: const TextStyle(color: Color(0xffffffff)),
+                            style: const TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize: 14,
+                            ),
                           ),
                         const SizedBox(height: 4),
                         Expanded(
@@ -148,6 +151,7 @@ class ShowFPSState extends State<ShowFPS> {
                             'FPS: ${timings.last.fps.toStringAsFixed(0)}',
                             style: const TextStyle(
                               color: Color(0xffffffff),
+                              fontSize: 14,
                             ),
                           )
                         : Container(),
