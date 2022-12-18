@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Fixed Customization in FPS Badge Position.
+
 ## 1.0.3
 
 - Font Size Fixed.

@@ -9,11 +9,11 @@ Use ShowFPS to monitor your app's FPS (Frames Per Second) in real time.
 
 ## Installation
 
-Add `show_fps: ^1.0.3` in your project's pubspec.yaml:
+Add `show_fps: ^1.0.4` in your project's pubspec.yaml:
 
 ```yaml
 dependencies:
-  show_fps: ^1.0.3
+  show_fps: ^1.0.4
 ```
 
 ## Usage
@@ -34,6 +34,7 @@ CupertinoApp(
       ),
       debugShowCheckedModeBanner: false,
       home: ShowFPS(
+        alignment: Alignment.topRight,
         visible: true,
         showChart: false,
         borderRadius: BorderRadius.all(Radius.circular(11)),

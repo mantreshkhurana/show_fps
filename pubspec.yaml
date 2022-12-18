@@ -1,6 +1,6 @@
 name: show_fps
-description: A package to show FPS on screen.
-version: 1.0.3
+description: A flutter package that will allow you to check your app performance using FPS Badge.
+version: 1.0.4
 homepage: https://github.com/mantreshkhurana/show_fps
 
 environment:
