@@ -5,11 +5,27 @@ extension FPS on Duration {
   double get fps => (1000 / inMilliseconds);
 }
 
+/// A widget that shows the current FPS.
 class ShowFPS extends StatefulWidget {
+  /// Where the [ShowFPS] should be positioned.
   final Alignment alignment;
+
+  /// Whether to show the [ShowFPS].
+  /// ```dart
+  /// ShowFPS(
+  ///   visible: !kReleaseMode,
+  ///   child: MyHomePage(),
+  /// )
+  /// ```
   final bool visible;
+
+  /// Will the [ShowFPS] show the chart.
   final bool showChart;
+
+  /// Where the [ShowFPS] should be assigned with a main widget to monitor.
   final Widget child;
+
+  /// The border radius of the [ShowFPS].
   final BorderRadius borderRadius;
 
   const ShowFPS({

@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Documentation Update.
+
 ## 1.0.4
 
 - Fixed Customization in FPS Badge Position.
