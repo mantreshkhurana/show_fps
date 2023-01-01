@@ -5,7 +5,7 @@
 
 Use ShowFPS to monitor your app's FPS (Frames Per Second) in real time.
 
-![Screenshot](./screenshots/screenshot-1.png)
+![Screenshot](https://raw.githubusercontent.com/mantreshkhurana/show_fps/stable/screenshots/screenshot-1.png)
 
 ## Installation
 
