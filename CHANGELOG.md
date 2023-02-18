@@ -1,24 +1,23 @@
 ## 1.0.5
 
-- Documentation Update.
+- Documentation update.
 
 ## 1.0.4
 
-- Fixed Customization in FPS Badge Position.
+- Fixed customization in FPS Badge position.
 
 ## 1.0.3
 
-- Font Size Fixed.
+- Font size fixed.
 
 ## 1.0.2
 
-- README.md Update.
+- README.md update.
 
 ## 1.0.1
 
-- FPS Chart Graph Color is now Blue.
+- FPS chart graph color is now blue.
 
 ## 1.0.0
 
 - Show FPS Badge on top of the screen.
-
