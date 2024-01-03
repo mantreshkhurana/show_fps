@@ -57,6 +57,10 @@ class ShowFPSState extends State<ShowFPS> {
   }
 
   update(Duration duration) {
+    if (!mounted || !widget.visible) {
+      return;
+    }
+
     setState(() {
       if (previous != null) {
         timings.add(duration - previous!);
@@ -68,9 +72,7 @@ class ShowFPSState extends State<ShowFPS> {
       previous = duration;
     });
 
-    if (mounted && widget.visible) {
-      SchedulerBinding.instance.addPostFrameCallback(update);
-    }
+    SchedulerBinding.instance.addPostFrameCallback(update);
   }
 
   @override
