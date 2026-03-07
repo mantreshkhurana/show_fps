@@ -172,6 +172,8 @@ class ShowFPSState extends State<ShowFPS> with SingleTickerProviderStateMixin {
 
   /// Updates the FPS counter with the current frame duration.
   void update(Duration duration) {
+    if(!mounted) return;
+    
     _frameCounter++;
 
     if (_frameCounter % widget.sampleRate == 0) {
